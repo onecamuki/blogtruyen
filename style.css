@@ -1,90 +1,102 @@
+/* Các kiểu dáng chung cho toàn trang */
 body {
-  margin: 0;
-  background-image: url('https://4.bp.blogspot.com/-sZRy7wUVmUo/WtyeEok9-TI/AAAAAAABiIk/bjAtb9tkNmkoIRkbxa3PL3KQXBtSLuimACKgBGAs/s3000/black-steel-background-3000x2000.jpg'); /* Thay URL ảnh nếu cần */
-  background-size: cover;
-  background-position: center;
-  font-family: sans-serif;
-  line-height: 1.6;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  align-items: center;
+    margin: 0;
+    background-image: url('https://4.bp.blogspot.com/-sZRy7wUVmUo/WtyeEok9-TI/AAAAAAABiIk/bjAtb9tkNmkoIRkbxa3PL3KQXBtSLuimACKgBGAs/s3000/black-steel-background-3000x2000.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #eee; /* Màu chữ sáng để tương phản tốt hơn */
+    font-family: sans-serif; /* Font mặc định, có thể thay đổi */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    padding-top: 90px; /* Khoảng cách từ header, sẽ được điều chỉnh ở media query */
 }
 
-/* Font face rule for Chococooky font */
+h1, h2 {
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Định nghĩa font Chococooky */
 @font-face {
-  font-family: 'Chococooky';
-  src: url('Chococooky.ttf') format('truetype');
+    font-family: 'Chococooky';
+    src: url('fonts/Chococooky.woff2') format('woff2'), /* Đường dẫn tương đối đến thư mục fonts */
+         url('fonts/Chococooky.woff') format('woff'),
+         url('fonts/Chococooky.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
+/* Header */
 .header {
-  background-color: #3c8c6c;
-  color: white;
-  padding: 5px 20px; /* Giảm padding trên và dưới */
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100%;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #3c8c6c;
+    color: white;
+    padding: 10px 20px; /* Padding trên dưới được tăng lên một chút */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .header h1 {
-  margin: 0;
-  font-size: 1.4em; /* Giảm kích thước font chữ */
+    margin: 0;
+    font-size: 1.6em; /* Kích thước font header lớn hơn một chút */
+    font-family: 'Chococooky'; /* Sử dụng font Chococooky cho header */
 }
 
+/* Nội dung chính */
 .noi-dung {
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  border-radius: 0 0 10px 10px; /* Bo tròn góc dưới */
-  box-sizing: border-box;
-  margin-top: 110px; /* Đã điều chỉnh */
-  width: 80%;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  overflow-x: auto;
-  overflow-y: auto;
-  word-wrap: break-word;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    box-sizing: border-box;
+    width: 80%;
+    max-width: 600px;
+    overflow-y: auto; /* Chỉ cho phép cuộn dọc */
+    word-wrap: break-word;
 }
 
 .noi-dung h2 {
-  text-align: center;
-  margin-top: 0;
-  margin-bottom: 1em;
-  font-size: 1.5em;
-}
-
-.noi-dung p {
-  margin-bottom: 1em;
-}
-
-.noi-dung img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 10px auto;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1em;
+    font-size: 1.8em;
 }
 
 .noi-dung .summary {
-  margin-top: 10px;
-  font-style: italic;
-  text-align: justify;
-  font-size: 14px;
+    margin-top: 10px;
+    font-style: italic;
+    text-align: justify;
+    font-size: 14px;
 }
 
+/* Media query cho màn hình nhỏ hơn 768px */
 @media (max-width: 768px) {
-  .noi-dung {
-    margin-top: 90px;
-    width: 95%;
-    padding: 15px;
-    border-radius: 0 0 5px 5px;
-  }
-  .header h1 {
-    font-size: 1.5em;
-  }
+    body {
+        padding-top: 70px; /* Điều chỉnh khoảng cách cho màn hình nhỏ */
+    }
+    .noi-dung {
+        width: 95%;
+        padding: 15px;
+        border-radius: 0 0 5px 5px;
+    }
+    .header h1 {
+        font-size: 1.4em;
+    }
 }

@@ -34,7 +34,7 @@ img {
 /* Định nghĩa font Chococooky (chỉ dùng ttf) */
 @font-face {
     font-family: 'Chococooky';
-    src: url('fonts/Chococooky.ttf') format('truetype'); /* Đường dẫn đến file ttf */
+    src: url('Chococooky.ttf') format('truetype'); /* Đường dẫn đến file ttf */
     font-weight: normal;
     font-style: normal;
 }

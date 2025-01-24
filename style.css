@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  background-image: url('https://4.bp.blogspot.com/-sZRy7wUVmUo/WtyeEok9-TI/AAAAAAABiIk/bjAtb9tkNmkoIRkbxa3PL3KQXBtSLuimACKgBGAs/s3000/black-steel-background-3000x2000.jpg'); /* Thay URL ảnh nếu cần */
+  background-size: cover;
+  background-position: center;
+  font-family: sans-serif;
+  line-height: 1.6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+}
+
+/* Font face rule for Chococooky font */
+@font-face {
+  font-family: 'Chococooky';
+  src: url('Chococooky.ttf') format('truetype');
+}
+
+.header {
+  background-color: #3c8c6c;
+  color: white;
+  padding: 5px 20px; /* Giảm padding trên và dưới */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.4em; /* Giảm kích thước font chữ */
+}
+
+.noi-dung {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 0 0 10px 10px; /* Bo tròn góc dưới */
+  box-sizing: border-box;
+  margin-top: 110px; /* Đã điều chỉnh */
+  width: 80%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: auto;
+  overflow-y: auto;
+  word-wrap: break-word;
+}
+
+.noi-dung h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+
+.noi-dung p {
+  margin-bottom: 1em;
+}
+
+.noi-dung img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.noi-dung .summary {
+  margin-top: 10px;
+  font-style: italic;
+  text-align: justify;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .noi-dung {
+    margin-top: 90px;
+    width: 95%;
+    padding: 15px;
+    border-radius: 0 0 5px 5px;
+  }
+  .header h1 {
+    font-size: 1.5em;
+  }
+}

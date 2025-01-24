@@ -4,14 +4,14 @@ body {
     background-image: url('https://4.bp.blogspot.com/-sZRy7wUVmUo/WtyeEok9-TI/AAAAAAABiIk/bjAtb9tkNmkoIRkbxa3PL3KQXBtSLuimACKgBGAs/s3000/black-steel-background-3000x2000.jpg');
     background-size: cover;
     background-position: center;
-    color: #eee; /* Màu chữ sáng để tương phản tốt hơn */
-    font-family: sans-serif; /* Font mặc định, có thể thay đổi */
+    color: #eee;
+    font-family: sans-serif;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     align-items: center;
-    padding-top: 90px; /* Khoảng cách từ header, sẽ được điều chỉnh ở media query */
+    padding-top: 90px;
 }
 
 h1, h2 {
@@ -31,12 +31,10 @@ img {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Định nghĩa font Chococooky */
+/* Định nghĩa font Chococooky (chỉ dùng ttf) */
 @font-face {
     font-family: 'Chococooky';
-    src: url('fonts/Chococooky.woff2') format('woff2'), /* Đường dẫn tương đối đến thư mục fonts */
-         url('fonts/Chococooky.woff') format('woff'),
-         url('fonts/Chococooky.ttf') format('truetype');
+    src: url('fonts/Chococooky.ttf') format('truetype'); /* Đường dẫn đến file ttf */
     font-weight: normal;
     font-style: normal;
 }
@@ -45,7 +43,7 @@ img {
 .header {
     background-color: #3c8c6c;
     color: white;
-    padding: 10px 20px; /* Padding trên dưới được tăng lên một chút */
+    padding: 10px 20px;
     position: fixed;
     top: 0;
     left: 0;
@@ -56,8 +54,8 @@ img {
 
 .header h1 {
     margin: 0;
-    font-size: 1.6em; /* Kích thước font header lớn hơn một chút */
-    font-family: 'Chococooky'; /* Sử dụng font Chococooky cho header */
+    font-size: 1.6em;
+    font-family: 'Chococooky', sans-serif; /* Sử dụng font Chococooky, kèm fallback */
 }
 
 /* Nội dung chính */
@@ -68,7 +66,7 @@ img {
     box-sizing: border-box;
     width: 80%;
     max-width: 600px;
-    overflow-y: auto; /* Chỉ cho phép cuộn dọc */
+    overflow-y: auto;
     word-wrap: break-word;
 }
 
@@ -86,10 +84,10 @@ img {
     font-size: 14px;
 }
 
-/* Media query cho màn hình nhỏ hơn 768px */
+/* Media query */
 @media (max-width: 768px) {
     body {
-        padding-top: 70px; /* Điều chỉnh khoảng cách cho màn hình nhỏ */
+        padding-top: 70px;
     }
     .noi-dung {
         width: 95%;
